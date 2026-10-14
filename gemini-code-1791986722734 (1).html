@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>pH7 — Decupați din Polizu | Revista SSIC</title>
+    <meta name="description" content="pH7 — Decupați din Polizu. Revista Societății Studenților în Inginerie Chimică și Biotehnologii.">
+    <meta name="theme-color" content="#100b19">
+    <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+
+    <script src="https://unpkg.com/lucide@0.469.0" defer></script>
+
+    <!-- Fonturile de bază (Groote + Neue Haas Grotesk + Space Mono) + 26 fonturi Google optimizate cu &text=pPhH7 exclusiv pentru Ransomizer -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Black+Ops+One&family=Bodoni+Moda:ital,wght@0,900;1,900&family=Bungee&family=Bungee+Shade&family=Courier+Prime:wght@700&family=Creepster&family=DM+Serif+Display:ital@0;1&family=Ewert&family=Fascinate+Inline&family=Fredericka+the+Great&family=Monoton&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,900&family=Righteous&family=Rubik+Glitch&family=Rubik+Mono+One&family=Rye&family=Shrikhand&family=Special+Elite&family=Staatliches&family=Ultra&text=pPhH7&display=block">
+
+    <style>
+        @font-face{font-family:'Groote';src:url('/assets/fonts/groote/Groote-Bold.woff2') format('woff2'),url('/assets/fonts/groote/Groote-Bold.ttf') format('truetype'),url('/assets/fonts/neue-haas/NeueHaasDisplayBlack.ttf') format('truetype');font-weight:700 900;font-style:normal;font-display:swap}
+        @font-face{font-family:'Neue Haas Grotesk';src:url('/assets/fonts/neue-haas/NeueHaasDisplayRoman.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+        @font-face{font-family:'Neue Haas Grotesk';src:url('/assets/fonts/neue-haas/NeueHaasDisplayMedium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+        @font-face{font-family:'Neue Haas Grotesk';src:url('/assets/fonts/neue-haas/NeueHaasDisplayBold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+        @font-face{font-family:'Neue Haas Grotesk';src:url('/assets/fonts/neue-haas/NeueHaasDisplayBlack.ttf') format('truetype');font-weight:900;font-style:normal;font-display:swap}
+
+        :root {
+            --r-sm: 10px;
+            --r-md: 16px;
+            --r-lg: 24px;
+            --sp-8: 8px;
+            --sp-12: 12px;
+            --sp-16: 16px;
+            --sp-20: 20px;
+            --sp-24: 24px;
+            --sp-32: 32px;
+            --sp-40: 40px;
+            --sp-48: 48px;
+            --sp-56: 56px;
+            --sp-64: 64px;
+            --sp-80: 80px;
+            --sp-96: 96px;
+
+            --c-base: #100b19;
+            --c-surface: #180f24;
+            --c-surface-elevated: #221631;
+            --c-primary: #5a2f8a;
+            --c-primary-light: #8348c4;
+            --c-purple: #2f0f3a;
+            --c-accent: #f5b027;
+            --c-accent-glow: rgba(245, 176, 39, 0.4);
+            --c-accent-2: #c9a6f2;
+            --c-accent-2-glow: rgba(201, 166, 242, 0.32);
+            --c-white: #ffffff;
+            --c-white-off: #e9e2ef;
+            --c-gray: #948aa3;
+            --c-gray-muted: #7e738f;
+
+            --c-border-hairline: rgba(255, 255, 255, 0.06);
+            --c-border-soft: rgba(255, 255, 255, 0.07);
+            --c-border: rgba(255, 255, 255, 0.09);
+            --c-border-strong: rgba(255, 255, 255, 0.12);
+            --c-border-med: rgba(255, 255, 255, 0.22);
+            --c-overlay-hover: rgba(255, 255, 255, 0.1);
+            --c-shadow-1: rgba(0, 0, 0, 0.5);
+            --c-shadow-2: rgba(0, 0, 0, 0.6);
+            --c-nav-bg: rgba(20, 13, 30, 0.9);
+            --c-nav-bg-solid: rgba(20, 13, 30, 0.97);
+            --c-footer-bg: #0c0812;
+            --c-cursor-ring: rgba(255, 255, 255, 0.4);
+
+            --font-main: "Neue Haas Grotesk", system-ui, sans-serif;
+            --font-display: "Neue Haas Grotesk", system-ui, sans-serif;
+            --font-groote: "Groote", "Neue Haas Grotesk", system-ui, sans-serif;
+            --font-mono: "Space Mono", ui-monospace, "SF Mono", monospace;
+
+            --ease-out: cubic-bezier(0.2, 1, 0.2, 1);
+            --ease-in-out: cubic-bezier(0.8, 0, 0.2, 1);
+            --ease-snap: cubic-bezier(0.08, 0.98, 0.18, 1);
+            --transition-fast: 0.3s var(--ease-out);
+
+            --z-bg: 0;
+            --z-content: 10;
+            --z-nav: 100;
+            --z-cursor: 9998;
+            --glass-saturation: 2;
+
+            --paper-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            *, *::before, *::after { cursor: none !important; }
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: var(--c-base);
+            color: var(--c-white-off);
+            font-family: var(--font-main);
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: 0.03em;
+        }
+
+        ::selection { background: var(--c-accent); color: var(--c-purple); }
+        .lucide, svg.icon-brand { width: 1em; height: 1em; vertical-align: -0.125em; flex-shrink: 0; }
+        .lucide { stroke-width: 1.75; }
+        svg.icon-brand { fill: currentColor; }
+        h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; color: var(--c-white); }
+        p { font-size: 1.15rem; color: var(--c-gray); line-height: 1.6; font-weight: 500; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+        .noise {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: 9997; opacity: 0.05; mix-blend-mode: overlay;
+            background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)"/%3E%3C/svg%3E');
+        }
+        .cursor {
+            position: fixed; top: 0; left: 0; width: 10px; height: 10px;
+            background: var(--c-accent); border-radius: 50%; pointer-events: none;
+            z-index: var(--z-cursor); transform: translate(-50%, -50%); will-change: transform;
+            transition: width 0.14s var(--ease-out), height 0.14s var(--ease-out), background 0.14s, opacity 0.14s var(--ease-out);
+            mix-blend-mode: normal;
+        }
+        @media (hover: none), (pointer: coarse) { .cursor { display: none; } }
+        .cursor.is-hidden { opacity: 0; }
+        .cursor.hovering {
+            width: 40px; height: 40px; background: var(--c-overlay-hover);
+            border: 1px solid var(--c-cursor-ring);
+            backdrop-filter: blur(3px) saturate(var(--glass-saturation));
+            -webkit-backdrop-filter: blur(3px) saturate(var(--glass-saturation));
+            mix-blend-mode: difference;
+        }
+
+        .scroll-progress {
+            position: fixed; top: 0; left: 0; width: 100%; height: 3px;
+            z-index: 10001; pointer-events: none; background: transparent;
+        }
+        .scroll-progress-fill {
+            height: 100%; width: 0%;
+            background: linear-gradient(90deg, var(--c-accent), var(--c-accent-2), var(--c-primary-light), var(--c-accent));
+            background-size: 300% 100%;
+            box-shadow: 0 0 12px var(--c-accent-glow);
+            transition: width 0.12s linear;
+            animation: progressGradientMove 6s linear infinite;
+        }
+        @keyframes progressGradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        /* ==========================================================================
+           NAVBAR — ASCUNS LA PRIMA ÎNCĂRCARE (.nav-hidden), LOGO + SLOGAN PE 2 RÂNDURI
+           ========================================================================== */
+        nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 90px;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 4vw; z-index: var(--z-nav);
+            transition: transform 0.5s var(--ease-out), opacity 0.4s var(--ease-out);
+        }
+        .nav-backdrop {
+            position: absolute; inset: 0; z-index: -1; pointer-events: none;
+            isolation: isolate; transform: translateZ(0); will-change: transform;
+        }
+        .nav-glass-blur {
+            position: absolute; inset: 0; background: var(--c-nav-bg);
+            backdrop-filter: blur(18px) saturate(var(--glass-saturation));
+            -webkit-backdrop-filter: blur(18px) saturate(var(--glass-saturation));
+        }
+        @supports (mask-image: none) or (-webkit-mask-image: none) {
+            .nav-glass-blur {
+                top: 0; left: 0; right: 0; bottom: auto; height: 200%;
+                -webkit-mask-image: linear-gradient(to bottom, black 0% 50%, transparent 50% 100%);
+                mask-image: linear-gradient(to bottom, black 0% 50%, transparent 50% 100%);
+            }
+        }
+        nav.nav-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            nav { transition: opacity 0.3s; }
+            nav.nav-hidden { transform: none; }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--sp-16);
+        }
+        .logo svg {
+            height: 44px;
+            width: auto;
+            display: block;
+        }
+        .slogan-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            font-family: var(--font-groote);
+            color: var(--c-gray);
+            line-height: 0.96;
+            user-select: none;
+        }
+        .slogan-stack--nav {
+            padding-left: var(--sp-16);
+            border-left: 1px solid var(--c-border-strong);
+        }
+        .slogan-stack .slogan-small {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: lowercase;
+            color: var(--c-gray-muted);
+            margin-bottom: 2px;
+        }
+        .slogan-stack .slogan-big {
+            font-size: 1.28rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--c-gray);
+        }
+        @media (max-width: 640px) {
+            .logo svg { height: 34px; }
+            .slogan-stack--nav { padding-left: var(--sp-12); }
+            .slogan-stack--nav .slogan-small { font-size: 0.58rem; }
+            .slogan-stack--nav .slogan-big { font-size: 1.02rem; }
+        }
+
+        .nav-right { display: flex; align-items: center; gap: var(--sp-16); }
+
+        .nav-back-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--sp-12);
+            border: none;
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--c-white-off);
+            padding: var(--sp-12) var(--sp-20);
+            border-radius: var(--r-md);
+            font-family: var(--font-main);
+            font-size: 0.92rem;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+        }
+        .nav-back-btn .lucide { width: 18px; height: 18px; flex-shrink: 0; }
+        .nav-back-btn:hover {
+            color: var(--c-base);
+            background: var(--c-accent);
+        }
+        .nav-back-btn:active { transform: scale(0.96); }
+
+        /* ==========================================================================
+           GRIDUL DIN FUNDAL DIN DEFAULT.HTML (.app + .view)
+           ========================================================================== */
+        .app {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            background-color: var(--c-base);
+            background-image:
+                repeating-linear-gradient(90deg, rgba(140, 90, 190, 0.07) 0px, rgba(140, 90, 190, 0.07) 1.5px, transparent 1.5px, transparent 64px),
+                repeating-linear-gradient(0deg, rgba(140, 90, 190, 0.07) 0px, rgba(140, 90, 190, 0.07) 1.5px, transparent 1.5px, transparent 64px),
+                repeating-linear-gradient(90deg, rgba(140, 90, 190, 0.06) 0px, rgba(140, 90, 190, 0.06) 1px, transparent 1px, transparent 16px),
+                repeating-linear-gradient(0deg, rgba(140, 90, 190, 0.06) 0px, rgba(140, 90, 190, 0.06) 1px, transparent 1px, transparent 16px);
+            background-repeat: repeat;
+            background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+            background-position: 0 0;
+            background-attachment: fixed;
+        }
+        @media (max-width: 768px) { .app { background-attachment: scroll; } }
+
+        .view {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth;
+            transform: translateZ(0); scrollbar-width: none; -ms-overflow-style: none;
+        }
+        .view::-webkit-scrollbar { display: none; }
+
+        /* ==========================================================================
+           HERO CU VIDEO DIN DEFAULT.HTML + EXCLUSIV LOGO-UL MASIV pH7
+           ========================================================================== */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            height: 100svh;
+            min-height: 640px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 4vw;
+            background-color: var(--c-base);
+            overflow: hidden;
+        }
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            object-fit: cover;
+            opacity: 0.55;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .hero-video {
+                mix-blend-mode: luminosity;
+                opacity: 0.5;
+            }
+        }
+        .hero-grad {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, var(--c-base) 0%, rgba(16, 11, 25, 0.35) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Logo-ul pH7 scalat masiv încât să umple tot ecranul */
+        .ph7 {
+            --h: clamp(210px, 42vw, 560px);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: var(--h);
+            gap: calc(var(--h) * 0.058);
+            margin-bottom: calc(var(--h) * -0.08);
+            user-select: none;
+        }
+        .slot { position: relative; height: 100%; flex: none; }
+        .slot[data-l="p"] { aspect-ratio: 408 / 854; }
+        .slot[data-l="H"] { aspect-ratio: 583 / 854; }
+        .slot[data-l="7"] { aspect-ratio: 427 / 854; }
+
+        .slot > .glyph {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transform: translateY(14%) scale(0.96);
+            pointer-events: none;
+        }
+        .ph7.is-in .slot > .glyph { animation: glyphIn 0.55s var(--ease-snap) forwards; }
+        .ph7.is-in .slot:nth-child(2) > .glyph { animation-delay: 0.06s; }
+        .ph7.is-in .slot:nth-child(3) > .glyph { animation-delay: 0.12s; }
+        @keyframes glyphIn { to { opacity: 1; transform: none; } }
+        .slot.is-cut > .glyph { visibility: hidden; }
+
+        .zone {
+            position: absolute;
+            left: -6%;
+            right: -6%;
+            top: 0;
+            height: 77.3%;
+            container-type: size;
+            display: grid;
+            place-items: center;
+            pointer-events: none;
+        }
+        .slot[data-l="p"] .zone { top: 27.3%; height: 72.7%; }
+
+        .cut {
+            grid-area: 1 / 1;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: min(calc(var(--fs, 74) * 1cqh), calc(var(--fw, 82) * 1cqw));
+            line-height: 0.92;
+            padding: 0.1em 0.16em 0.06em;
+            color: var(--fg);
+            background-color: var(--bg);
+            background-image: var(--paper-noise);
+            background-size: 160px 160px;
+            background-blend-mode: multiply;
+            box-shadow: 0.04em 0.06em 0 rgba(10, 2, 16, 0.72);
+            will-change: transform, filter, opacity;
+        }
+        .cut.v-outline { color: transparent; -webkit-text-stroke: 0.045em var(--fg); }
+        .cut.v-bar { box-shadow: 0.04em 0.06em 0 rgba(10, 2, 16, 0.72), inset 0 -0.12em 0 var(--fg); }
+        .cut.v-frame { outline: 0.03em solid var(--fg); outline-offset: -0.07em; }
+        .cut.v-tape::after {
+            content: "";
+            position: absolute;
+            width: 0.7em;
+            height: 0.22em;
+            top: -0.08em;
+            left: 50%;
+            transform: translateX(-50%) rotate(-4deg);
+            background: rgba(239, 232, 245, 0.55);
+        }
+
+        /* ==========================================================================
+           SECȚIUNEA FORMULAR DE ÎNSCRIERE — STILUL .cereri-intro-card DIN DEFAULT.HTML
+           ========================================================================== */
+        .enroll-section {
+            position: relative;
+            z-index: 2;
+            padding: var(--sp-80) 6vw var(--sp-96);
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .enroll-header {
+            width: 100%;
+            max-width: 620px;
+            margin-bottom: var(--sp-32);
+        }
+        .enroll-header h2 {
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.08;
+            margin-bottom: var(--sp-12);
+        }
+        .enroll-header h2 i {
+            font-style: normal;
+            color: var(--c-accent);
+        }
+
+        .cereri-intro-card {
+            position: relative;
+            isolation: isolate;
+            width: 100%;
+            max-width: 620px;
+            padding: var(--sp-32);
+            margin-bottom: var(--sp-20);
+            background: rgba(34, 22, 49, 0.70);
+            border: 1px solid var(--c-border-soft);
+            border-radius: var(--r-md);
+        }
+        .cereri-intro-card::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            inset: 0;
+            border-radius: inherit;
+            background: rgba(34, 22, 49, 0.70);
+        }
+        @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+            .cereri-intro-card::before {
+                background: var(--c-nav-bg);
+                backdrop-filter: blur(18px) saturate(var(--glass-saturation));
+                -webkit-backdrop-filter: blur(18px) saturate(var(--glass-saturation));
+            }
+        }
+        .cereri-field {
+            position: relative;
+            margin-bottom: var(--sp-20);
+        }
+        .cereri-field label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--c-gray);
+            margin-bottom: var(--sp-8);
+        }
+        .cereri-field input,
+        .cereri-field select {
+            width: 100%;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--c-white);
+            background: var(--c-base);
+            border: 1.5px solid var(--c-border-strong);
+            border-radius: var(--r-sm);
+            padding: var(--sp-12) var(--sp-16);
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            transition: border-color var(--transition-fast);
+        }
+        .cereri-field input:focus,
+        .cereri-field select:focus {
+            border-color: var(--c-accent);
+        }
+        .cereri-field select {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23948aa3" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: var(--sp-40);
+        }
+        .cereri-row2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 var(--sp-16);
+        }
+
+        .role-selector-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--sp-8);
+            padding: 6px;
+            border-radius: var(--r-md);
+            background: var(--c-base);
+            border: 1.5px solid var(--c-border-strong);
+        }
+        .role-choice {
+            position: relative;
+        }
+        .role-choice input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .role-choice span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--sp-8);
+            width: 100%;
+            padding: var(--sp-12) var(--sp-16);
+            border-radius: var(--r-sm);
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--c-gray);
+            background: transparent;
+            transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+        }
+        .role-choice input:checked + span {
+            color: var(--c-base);
+            background: var(--c-accent);
+        }
+        .role-choice:hover span {
+            color: var(--c-white);
+        }
+        .role-choice input:checked:hover + span {
+            color: var(--c-base);
+        }
+        @media (max-width: 600px) {
+            .cereri-row2 { grid-template-columns: 1fr; }
+            .role-selector-grid { grid-template-columns: 1fr; }
+            .cereri-intro-card { padding: var(--sp-24) var(--sp-20); }
+        }
+
+        .cereri-field-invalid input,
+        .cereri-field-invalid select,
+        .cereri-field-invalid .role-selector-grid {
+            border-color: #ff8a8a !important;
+        }
+        .cereri-field-tooltip {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: var(--sp-8);
+            z-index: 30;
+            display: flex;
+            align-items: flex-start;
+            gap: var(--sp-12);
+            max-width: 320px;
+            width: max-content;
+            background: var(--c-surface-elevated);
+            border: 1px solid var(--c-border-strong);
+            border-left: 3px solid #ff8a8a;
+            border-radius: var(--r-sm);
+            padding: var(--sp-12) var(--sp-16);
+            box-shadow: 0 16px 40px var(--c-shadow-2);
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--c-white-off);
+        }
+        .cereri-field-tooltip .lucide {
+            color: #ff8a8a;
+            flex-shrink: 0;
+            margin-top: 2px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .cereri-generate-btn {
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-family: var(--font-main);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--c-base);
+            background: var(--c-accent);
+            border: none;
+            border-radius: var(--r-sm);
+            padding: var(--sp-16);
+            cursor: pointer;
+            margin-top: 6px;
+            transition: transform var(--transition-fast), background 0.25s var(--ease-out), opacity var(--transition-fast);
+        }
+        .cereri-generate-btn:active { transform: scale(0.98); }
+        @media (hover: hover) {
+            .cereri-generate-btn:hover { background: var(--c-accent-2); }
+        }
+        .cereri-status {
+            text-align: center;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--c-gray);
+            margin-top: var(--sp-12);
+            min-height: 1.2em;
+        }
+        .cereri-status.is-ok { color: var(--c-accent); }
+
+        /* ==========================================================================
+           FOOTER — IDENTIC CU SITE-UL DEFAULT, CU pH7 + SLOGANUL PE DOUĂ RÂNDURI
+           ========================================================================== */
+        footer {
+            background: var(--c-footer-bg);
+            padding: var(--sp-80) 6vw 0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 10;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--sp-56);
+            padding-bottom: var(--sp-56);
+        }
+        .ft-col h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--c-white);
+            margin-bottom: var(--sp-20);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .ft-col p {
+            font-size: 1rem;
+            margin-bottom: var(--sp-12);
+            color: var(--c-gray);
+        }
+        .ft-brand-row {
+            display: flex;
+            align-items: center;
+            gap: var(--sp-16);
+            margin-bottom: var(--sp-20);
+        }
+        .ft-brand-row h4 {
+            margin-bottom: 0;
+            font-family: var(--font-groote);
+            font-size: 1.75rem;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+        }
+        .ft-dept-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px var(--sp-8);
+        }
+        .ft-dept-links a {
+            color: var(--c-white-off);
+            font-weight: 700;
+            text-decoration: none;
+            background-image: linear-gradient(var(--c-accent), var(--c-accent));
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            background-position: 0 100%;
+            transition: color 0.2s var(--ease-out), background-size 0.25s var(--ease-out);
+            padding-bottom: 1px;
+        }
+        .ft-dept-links span { color: var(--c-gray); opacity: 0.5; }
+        .ft-mail {
+            display: flex;
+            align-items: center;
+            gap: var(--sp-8);
+            color: var(--c-accent) !important;
+            font-weight: 700;
+            transition: color 0.25s var(--ease-out), gap 0.25s var(--ease-out);
+            width: fit-content;
+        }
+        .ft-mail i, .ft-mail .lucide { font-size: 0.95em; }
+        .ft-links-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--sp-8) var(--sp-24);
+            margin-top: var(--sp-12);
+        }
+        .social-icons {
+            display: flex;
+            gap: var(--sp-16);
+            margin-top: var(--sp-20);
+        }
+        .soc-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: var(--r-sm);
+            border: 1px solid var(--c-border-strong);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--c-white);
+            transition: all var(--transition-fast);
+            font-size: 1.2rem;
+        }
+        .footer-bottom {
+            margin-top: var(--sp-20);
+            padding: 22px 0 max(22px, env(safe-area-inset-bottom));
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--sp-12) var(--sp-24);
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            color: var(--c-gray);
+        }
+        .footer-bottom a { color: var(--c-gray); transition: color 0.2s var(--ease-out); }
+        .ft-credit {
+            flex: 0 0 100%;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--sp-8);
+            font-size: 0.74rem;
+            letter-spacing: 0.3px;
+            opacity: 0.7;
+            transition: opacity 0.3s var(--ease-out);
+        }
+        .ft-credit-glyph {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--c-accent);
+            display: inline-block;
+            transition: transform 0.35s var(--ease-out);
+        }
+        .ft-credit strong { font-weight: 700; color: inherit; transition: color 0.3s var(--ease-out); }
+        .ft-credit:hover { opacity: 1; }
+        .ft-credit:hover .ft-credit-glyph { transform: rotate(-8deg) scale(1.12); }
+        .ft-credit:hover strong { color: var(--c-accent); }
+
+        @media (hover: hover) and (pointer: fine) {
+            .ft-dept-links a:hover { color: var(--c-accent); background-size: 100% 1px; }
+            .ft-mail:hover { color: var(--c-accent-2) !important; gap: var(--sp-12); }
+            .soc-icon:hover { background: var(--c-white); color: var(--c-base); }
+            .footer-bottom a:hover { color: var(--c-accent); }
+        }
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            footer { padding: var(--sp-56) 6vw 0; }
+            .footer-grid { grid-template-columns: 1fr; gap: var(--sp-40); padding-bottom: var(--sp-40); }
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: var(--sp-8);
+                text-align: left;
+                padding: 18px 0 max(26px, env(safe-area-inset-bottom));
+                font-size: 0.78rem;
+            }
+        }
+
+        /* ==========================================================================
+           ACCESIBILITATE DIN DEFAULT.HTML
+           ========================================================================== */
+        .a11y-trigger {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: var(--sp-12); flex-shrink: 0; width: fit-content; margin-top: var(--sp-16);
+            appearance: none; -webkit-appearance: none;
+            border: 1px solid var(--c-border-strong); background: rgba(255, 255, 255, 0.04);
+            color: var(--c-white-off); padding: var(--sp-12) var(--sp-20);
+            border-radius: var(--r-md); cursor: pointer;
+            font-family: var(--font-main); font-size: 0.92rem; font-weight: 700;
+            white-space: nowrap;
+            transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+        }
+        .a11y-trigger .lucide { width: 20px; height: 20px; flex-shrink: 0; }
+        .a11y-trigger:hover, .a11y-trigger.is-active {
+            color: var(--c-base); border-color: var(--c-accent); background: var(--c-accent);
+        }
+        .a11y-overlay {
+            position: fixed; inset: 0; z-index: 9200;
+            display: flex; align-items: center; justify-content: center; padding: 6vh 5vw;
+            background: rgba(8, 5, 13, 0.82);
+            backdrop-filter: blur(28px) saturate(var(--glass-saturation));
+            -webkit-backdrop-filter: blur(28px) saturate(var(--glass-saturation));
+            opacity: 0; visibility: hidden; pointer-events: none;
+            transition: opacity 0.25s var(--ease-out), visibility 0s linear 0.25s;
+        }
+        .a11y-overlay.open {
+            opacity: 1; visibility: visible; pointer-events: auto;
+            transition: opacity 0.25s var(--ease-out), visibility 0s linear 0s;
+        }
+        .a11y-panel {
+            width: 100%; max-width: 640px; max-height: 84vh;
+            background: var(--c-surface-elevated); border-radius: var(--r-lg);
+            box-shadow: 0 30px 80px var(--c-shadow-2);
+            display: flex; flex-direction: column; overflow: hidden;
+            transform: translateY(-16px) scale(0.98); opacity: 0;
+            transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+        }
+        .a11y-overlay.open .a11y-panel { transform: translateY(0) scale(1); opacity: 1; }
+        .a11y-panel-head {
+            display: flex; align-items: center; gap: var(--sp-12);
+            padding: var(--sp-20) var(--sp-20) var(--sp-20) var(--sp-24);
+            border-bottom: 1px solid var(--c-border);
+        }
+        .a11y-panel-head h3 { font-size: 1.15rem; display: flex; align-items: center; gap: var(--sp-12); }
+        .a11y-panel-head h3 .lucide { color: var(--c-accent); font-size: 1.1rem; }
+        .a11y-close-btn {
+            appearance: none; -webkit-appearance: none; border: none; padding: 0; margin-left: auto;
+            width: 34px; height: 34px; border-radius: var(--r-sm); flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.06); color: var(--c-white-off);
+            display: flex; align-items: center; justify-content: center; cursor: pointer;
+            transition: background var(--transition-fast), color var(--transition-fast);
+        }
+        .a11y-close-btn:hover { background: var(--c-overlay-hover); color: var(--c-white); }
+        .a11y-panel-body { overflow-y: auto; padding: var(--sp-20) var(--sp-24) var(--sp-8); }
+        .a11y-group-label {
+            font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em; color: var(--c-gray);
+            margin: var(--sp-16) 0 var(--sp-8);
+        }
+        .a11y-option {
+            display: flex; align-items: center; gap: var(--sp-16);
+            padding: var(--sp-12); border-radius: var(--r-md);
+            transition: background var(--transition-fast);
+        }
+        .a11y-option:hover { background: rgba(255, 255, 255, 0.03); }
+        .a11y-option-icon {
+            width: 40px; height: 40px; border-radius: var(--r-sm); flex-shrink: 0;
+            background: rgba(245, 176, 39, 0.1); color: var(--c-accent);
+            display: flex; align-items: center; justify-content: center; font-size: 1.05rem;
+        }
+        .a11y-option-text { min-width: 0; flex: 1; }
+        .a11y-option-text strong { display: block; color: var(--c-white); font-size: 0.98rem; font-weight: 700; }
+        .a11y-option-text span { display: block; color: var(--c-gray); font-size: 0.82rem; margin-top: 2px; line-height: 1.4; }
+        .a11y-switch {
+            appearance: none; -webkit-appearance: none; position: relative; flex-shrink: 0;
+            width: 46px; height: 27px; border-radius: var(--r-sm); cursor: pointer;
+            background: rgba(255, 255, 255, 0.08); border: 1px solid var(--c-border-strong);
+            transition: background var(--transition-fast), border-color var(--transition-fast);
+        }
+        .a11y-switch::after {
+            content: ''; position: absolute; top: 3px; left: 3px; width: 19px; height: 19px;
+            border-radius: 6px; background: var(--c-white-off);
+            transition: transform var(--transition-fast), background var(--transition-fast);
+        }
+        .a11y-switch.is-on { background: var(--c-accent); border-color: var(--c-accent); }
+        .a11y-switch.is-on::after { transform: translateX(17px); background: var(--c-base); }
+        .a11y-stepper { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+        .a11y-step-btn {
+            appearance: none; -webkit-appearance: none; border: 1px solid var(--c-border-strong);
+            background: rgba(255, 255, 255, 0.04); color: var(--c-white-off);
+            width: 32px; height: 32px; border-radius: var(--r-sm);
+            font-family: var(--font-display); font-weight: 700; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all var(--transition-fast);
+        }
+        .a11y-step-dots { display: flex; gap: 4px; margin: 0 6px; }
+        .a11y-step-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--c-border-med); display: block; }
+        .a11y-step-dots i.is-filled { background: var(--c-accent); }
+        .a11y-panel-foot {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: var(--sp-12); padding: 14px 24px max(14px, env(safe-area-inset-bottom));
+            border-top: 1px solid var(--c-border);
+        }
+        .a11y-panel-foot span { font-size: 0.78rem; color: var(--c-gray); }
+        .a11y-reset-btn {
+            appearance: none; -webkit-appearance: none; border: 1px solid var(--c-border-strong);
+            background: transparent; color: var(--c-white-off); font: inherit; font-weight: 700;
+            font-size: 0.85rem; padding: var(--sp-8) var(--sp-16); border-radius: var(--r-sm);
+            cursor: pointer; display: flex; align-items: center; gap: var(--sp-8);
+            transition: all var(--transition-fast);
+        }
+        .a11y-reset-btn:hover { border-color: var(--c-accent); color: var(--c-accent); }
+
+        html.a11y-contrast {
+            --c-base: #000000; --c-surface: #0a0a0a; --c-surface-elevated: #131313;
+            --c-accent: #ffd23f; --c-white: #ffffff; --c-white-off: #ffffff; --c-gray: #ededed;
+            --c-footer-bg: #000000; --c-nav-bg: rgba(0, 0, 0, 0.98);
+        }
+        html.a11y-underline a:not(.soc-icon):not(.a11y-trigger) { text-decoration: underline !important; text-underline-offset: 3px; }
+        html.a11y-cursor-visible, html.a11y-cursor-visible * { cursor: auto !important; }
+        html.a11y-cursor-visible .cursor { display: none !important; }
+        html.a11y-reduce-motion *, html.a11y-reduce-motion *::before, html.a11y-reduce-motion *::after {
+            animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important;
+        }
+        @font-face { font-family: 'OpenDyslexic'; src: url('https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/otf/OpenDyslexic-Regular.otf') format('opentype'); font-display: swap; }
+        html.a11y-dyslexia, html.a11y-dyslexia p, html.a11y-dyslexia span, html.a11y-dyslexia a, html.a11y-dyslexia h1, html.a11y-dyslexia h2, html.a11y-dyslexia h3, html.a11y-dyslexia h4 {
+            font-family: 'OpenDyslexic', Verdana, sans-serif !important;
+        }
+        html[data-a11y-text="1"] { font-size: 111%; }
+        html[data-a11y-text="2"] { font-size: 122%; }
+    </style>
+</head>
+<body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-fill" id="scrollProgressFill"></div></div>
+
+    <!-- ================= NAVBAR: ASCUNS LA PRIMA ÎNCĂRCARE (.nav-hidden) ================= -->
+    <nav class="nav-hidden" id="mainNav">
+        <div class="nav-backdrop" aria-hidden="true">
+            <div class="nav-glass-blur"></div>
+        </div>
+        <a class="logo hover-target" href="/" aria-label="pH7 — decupați din POLIZU">
+            <svg viewBox="0 0 1540 880" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <g fill="#290933" transform="translate(24, 18)">
+                    <path d="M212,233 C92,233 18,318 18,442 L18,854 L132,854 L132,535 L148,535 C154,606 196,656 266,656 C362,656 414,572 414,444 C414,316 340,233 212,233 Z M222,334 C284,334 318,376 318,444 C318,512 284,554 222,554 C162,554 128,512 128,444 C128,376 162,334 222,334 Z"/>
+                    <path d="M468,20 L582,20 L582,366 L918,310 L918,20 L1032,20 L1032,652 L918,652 L918,412 L582,412 L582,652 L468,652 Z"/>
+                    <path d="M1094,20 L1508,20 L1508,112 L1332,652 L1212,652 L1384,126 L1094,126 Z"/>
+                </g>
+                <g fill="#f5b027">
+                    <path d="M212,233 C92,233 18,318 18,442 L18,854 L132,854 L132,535 L148,535 C154,606 196,656 266,656 C362,656 414,572 414,444 C414,316 340,233 212,233 Z M222,334 C284,334 318,376 318,444 C318,512 284,554 222,554 C162,554 128,512 128,444 C128,376 162,334 222,334 Z"/>
+                    <path d="M468,20 L582,20 L582,366 L918,310 L918,20 L1032,20 L1032,652 L918,652 L918,412 L582,412 L582,652 L468,652 Z"/>
+                    <path d="M1094,20 L1508,20 L1508,112 L1332,652 L1212,652 L1384,126 L1094,126 Z"/>
+                </g>
+            </svg>
+            <span class="slogan-stack slogan-stack--nav">
+                <span class="slogan-small">decupați din</span>
+                <span class="slogan-big">POLIZU</span>
+            </span>
+        </a>
+        <div class="nav-right">
+            <a class="nav-back-btn hover-target" href="https://ssic.ro">
+                <i data-lucide="arrow-left"></i>
+                <span>Înapoi pe ssic.ro</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ================= MAIN APP CU GRIDUL DIN DEFAULT.HTML ================= -->
+    <main class="app">
+        <div class="view active" id="view-home">
+
+            <!-- ================= HERO CU VIDEO CA PE DEFAULT.HTML + EXCLUSIV LOGO pH7 ================= -->
+            <section class="hero" id="home">
+                <!-- Pune videoclipul în repo la calea /assets/video/hero.mp4 -->
+                <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="/assets/logo/banner.png">
+                    <source src="/assets/video/hero.mp4" type="video/mp4">
+                </video>
+                <div class="hero-grad" aria-hidden="true"></div>
+
+                <div class="hero-content">
+                    <h1 class="sr-only">pH7 — decupați din POLIZU</h1>
+
+                    <div class="ph7" id="ph7" aria-hidden="true">
+                        <div class="slot" data-l="p">
+                            <svg class="glyph" viewBox="0 0 440 880" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#290933" d="M236,251 C116,251 42,336 42,460 L42,872 L156,872 L156,553 L172,553 C178,624 220,674 290,674 C386,674 438,590 438,462 C438,334 364,251 236,251 Z M246,352 C308,352 342,394 342,462 C342,530 308,572 246,572 C186,572 152,530 152,462 C152,394 186,352 246,352 Z"/>
+                                <path fill="#f5b027" d="M212,233 C92,233 18,318 18,442 L18,854 L132,854 L132,535 L148,535 C154,606 196,656 266,656 C362,656 414,572 414,444 C414,316 340,233 212,233 Z M222,334 C284,334 318,376 318,444 C318,512 284,554 222,554 C162,554 128,512 128,444 C128,376 162,334 222,334 Z"/>
+                            </svg>
+                            <div class="zone"></div>
+                        </div>
+
+                        <div class="slot" data-l="H">
+                            <svg class="glyph" viewBox="0 0 610 880" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#290933" d="M36,38 L150,38 L150,384 L486,328 L486,38 L600,38 L600,670 L486,670 L486,430 L150,430 L150,670 L36,670 Z"/>
+                                <path fill="#f5b027" d="M12,20 L126,20 L126,366 L462,310 L462,20 L576,20 L576,652 L462,652 L462,412 L126,412 L126,652 L12,652 Z"/>
+                            </svg>
+                            <div class="zone"></div>
+                        </div>
+
+                        <div class="slot" data-l="7">
+                            <svg class="glyph" viewBox="0 0 455 880" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#290933" d="M34,38 L448,38 L448,130 L272,670 L152,670 L324,144 L34,144 Z"/>
+                                <path fill="#f5b027" d="M10,20 L424,20 L424,112 L248,652 L128,652 L300,126 L10,126 Z"/>
+                            </svg>
+                            <div class="zone"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= FORMULAR ÎNTREG ÎN STILUL SITE DEFAULT ================= -->
+            <section class="enroll-section" id="inscriere">
+                <div class="enroll-header">
+                    <h2>Înscrie-te în <i>pH7</i></h2>
+                    <p>Completează datele tale și alege aria în care vrei să contribui la revista SSIC.</p>
+                </div>
+
+                <form class="cereri-intro-card" id="ph7EnrollForm" novalidate>
+                    <div class="cereri-row2">
+                        <div class="cereri-field">
+                            <label for="phNume">Nume</label>
+                            <input type="text" id="phNume" name="nume" placeholder="Ex: Popescu" autocomplete="family-name" required>
+                        </div>
+                        <div class="cereri-field">
+                            <label for="phPrenume">Prenume</label>
+                            <input type="text" id="phPrenume" name="prenume" placeholder="Ex: Andrei" autocomplete="given-name" required>
+                        </div>
+                    </div>
+
+                    <div class="cereri-row2">
+                        <div class="cereri-field">
+                            <label for="phAn">An de studiu</label>
+                            <select id="phAn" name="an" required>
+                                <option value="" selected disabled>Alege anul</option>
+                                <option value="I">Anul I</option>
+                                <option value="II">Anul II</option>
+                                <option value="III">Anul III</option>
+                                <option value="IV">Anul IV</option>
+                                <option value="Master I">Master I</option>
+                                <option value="Master II">Master II</option>
+                            </select>
+                        </div>
+                        <div class="cereri-field">
+                            <label for="phDept">Departament SSIC</label>
+                            <select id="phDept" name="departament" required>
+                                <option value="" selected disabled>Alege departamentul</option>
+                                <option value="PR">PR</option>
+                                <option value="HR">HR</option>
+                                <option value="Fundraising">Fundraising</option>
+                                <option value="Evenimente">Evenimente</option>
+                                <option value="Extern (Nu sunt în SSIC încă)">Nu sunt în SSIC încă</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="cereri-field" id="phRoleField">
+                        <label>Ce vrei să faci în pH7?</label>
+                        <div class="role-selector-grid" role="radiogroup" aria-label="Alege rolul dorit în revistă">
+                            <label class="role-choice hover-target">
+                                <input type="radio" name="rol" value="Videografie" required>
+                                <span><i data-lucide="video"></i> Videografie</span>
+                            </label>
+                            <label class="role-choice hover-target">
+                                <input type="radio" name="rol" value="Fotografie">
+                                <span><i data-lucide="camera"></i> Fotografie</span>
+                            </label>
+                            <label class="role-choice hover-target">
+                                <input type="radio" name="rol" value="Redacție">
+                                <span><i data-lucide="pen-tool"></i> Redacție</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cereri-generate-btn hover-target" id="phSubmitBtn">
+                        Trimite înscrierea
+                    </button>
+                    <div class="cereri-status" id="phFormStatus" role="status" aria-live="polite"></div>
+                </form>
+            </section>
+
+            <!-- ================= FOOTER IDENTIC CU SSIC.RO, ADAPTAT PENTRU pH7 ================= -->
+            <footer class="global-footer"></footer>
+        </div>
+    </main>
+
+    <!-- ================= MODAL ACCESIBILITATE DIN DEFAULT.HTML ================= -->
+    <div class="a11y-overlay" id="a11yOverlay" role="dialog" aria-modal="true" aria-label="Opțiuni de accesibilitate">
+        <div class="a11y-panel">
+            <div class="a11y-panel-head">
+                <h3><svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg> Accesibilitate</h3>
+                <button type="button" class="a11y-close-btn hover-target" id="a11yCloseBtn" aria-label="Închide">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="a11y-panel-body">
+                <p style="font-size:0.85rem; color:var(--c-gray); margin-bottom:4px;">Setările se salvează automat pe acest dispozitiv și se aplică pe toate paginile site-ului.</p>
+                <div class="a11y-group-label">Text</div>
+                <div class="a11y-option">
+                    <div class="a11y-option-icon"><i data-lucide="type"></i></div>
+                    <div class="a11y-option-text">
+                        <strong>Mărime text</strong>
+                        <span>Mărește dimensiunea textului pe tot site-ul, în 3 trepte.</span>
+                    </div>
+                    <div class="a11y-stepper">
+                        <button type="button" class="a11y-step-btn hover-target" id="a11yTextDown" aria-label="Text mai mic">A−</button>
+                        <div class="a11y-step-dots" id="a11yTextDots" aria-hidden="true"><i></i><i></i><i></i></div>
+                        <button type="button" class="a11y-step-btn hover-target" id="a11yTextUp" aria-label="Text mai mare">A+</button>
+                    </div>
+                </div>
+                <div class="a11y-option">
+                    <div class="a11y-option-icon"><i data-lucide="link-2"></i></div>
+                    <div class="a11y-option-text">
+                        <strong>Subliniere linkuri</strong>
+                        <span>Toate link-urile devin subliniate, nu doar colorate, util pentru daltonism.</span>
+                    </div>
+                    <button type="button" class="a11y-switch hover-target" id="a11ySwitchUnderline" role="switch" aria-checked="false" aria-label="Subliniere linkuri"></button>
+                </div>
+                <div class="a11y-option">
+                    <div class="a11y-option-icon"><i data-lucide="book-open"></i></div>
+                    <div class="a11y-option-text">
+                        <strong>Font pentru dislexie</strong>
+                        <span>Comută pe un font conceput pentru dislexie, cu spațiere mărită între litere.</span>
+                    </div>
+                    <button type="button" class="a11y-switch hover-target" id="a11ySwitchDyslexia" role="switch" aria-checked="false" aria-label="Font pentru dislexie"></button>
+                </div>
+                <div class="a11y-group-label">Vizual</div>
+                <div class="a11y-option">
+                    <div class="a11y-option-icon"><i data-lucide="contrast"></i></div>
+                    <div class="a11y-option-text">
+                        <strong>Contrast ridicat</strong>
+                        <span>Culori aproape alb-negru, cu accent auriu mai puternic, pentru lizibilitate maximă.</span>
+                    </div>
+                    <button type="button" class="a11y-switch hover-target" id="a11ySwitchContrast" role="switch" aria-checked="false" aria-label="Contrast ridicat"></button>
+                </div>
+                <div class="a11y-option">
+                    <div class="a11y-option-icon"><i data-lucide="mouse-pointer-2"></i></div>
+                    <div class="a11y-option-text">
+                        <strong>Cursor nativ vizibil</strong>
+                        <span>Dezactivează cursorul custom animat și îl înlocuiește cu săgeata obișnuită a sistemului.</span>
+                    </div>
+                    <button type="button" class="a11y-switch hover-target" id="a11ySwitchCursor" role="switch" aria-checked="false" aria-label="Cursor nativ vizibil"></button>
+                </div>
+                <div class="a11y-option">
+                    <div class="a11y-option-icon"><i data-lucide="zap-off"></i></div>
+                    <div class="a11y-option-text">
+                        <strong>Reducere animații</strong>
+                        <span>Oprește tranzițiile și animațiile decorative de pe site.</span>
+                    </div>
+                    <button type="button" class="a11y-switch hover-target" id="a11ySwitchMotion" role="switch" aria-checked="false" aria-label="Reducere animații"></button>
+                </div>
+            </div>
+            <div class="a11y-panel-foot">
+                <span>Compatibil cu Ctrl/Cmd + tastatura.</span>
+                <button type="button" class="a11y-reset-btn hover-target" id="a11yResetBtn">
+                    <i data-lucide="rotate-ccw"></i> Resetează
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    "use strict";
+
+    /* ==========================================================================
+       1. FOOTER IDENTIC CU DEFAULT.HTML — CU pH7 ȘI SLOGANUL GROOTE GRI PE 2 RÂNDURI
+       ========================================================================== */
+    const footerHTML = `
+        <div class="footer-grid">
+            <div class="ft-col">
+                <div class="ft-brand-row">
+                    <h4>pH<i style="color:var(--c-accent); font-style:normal;">7</i></h4>
+                    <span class="slogan-stack slogan-stack--nav">
+                        <span class="slogan-small">decupați din</span>
+                        <span class="slogan-big">POLIZU</span>
+                    </span>
+                </div>
+                <p>Revista Societății Studenților în Inginerie Chimică și Biotehnologii.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ssic.upb/" target="_blank" class="soc-icon hover-target" title="Facebook"><svg class="icon-brand" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
+                    <a href="https://www.instagram.com/ssic.upb/" target="_blank" class="soc-icon hover-target" title="Instagram"><svg class="icon-brand" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+                    <a href="https://www.linkedin.com/posts/ssicb_ficbi-ssic-activity-7123925339956781056-4ugv?originalSubdomain=ro" target="_blank" class="soc-icon hover-target" title="LinkedIn"><svg class="icon-brand" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg></a>
+                    <a href="https://www.tiktok.com/@ssic.upb" target="_blank" class="soc-icon hover-target" title="TikTok"><svg class="icon-brand" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg></a>
+                </div>
+            </div>
+            <div class="ft-col">
+                <h4>Locație</h4>
+                <p>Strada Gheorghe Polizu 1-7, Campus Polizu, Corp L, sala L028, Sectorul 1, București, România</p>
+                <div class="ft-links-row">
+                    <a href="mailto:ssic.upb@gmail.com" class="ft-mail hover-target"><i data-lucide="mail"></i> ssic.upb@gmail.com</a>
+                    <a href="https://chimie.upb.ro" target="_blank" rel="noopener" class="ft-mail hover-target"><i data-lucide="landmark"></i> Pagina Facultății</a>
+                </div>
+            </div>
+            <div class="ft-col">
+                <h4>Structură</h4>
+                <p class="ft-dept-links">
+                    <a href="https://ssic.ro/board/#dept-cd" class="hover-target">Consiliu Director</a><span>·</span>
+                    <a href="https://ssic.ro/board/#dept-pr" class="hover-target">PR</a><span>·</span>
+                    <a href="https://ssic.ro/board/#dept-hr" class="hover-target">HR</a><span>·</span>
+                    <a href="https://ssic.ro/board/#dept-fr" class="hover-target">Fundraising</a><span>·</span>
+                    <a href="https://ssic.ro/board/#dept-ev" class="hover-target">Evenimente</a>
+                </p>
+                <button type="button" class="a11y-trigger hover-target" data-a11y-trigger title="Accesibilitate" aria-label="Deschide opțiunile de accesibilitate" aria-haspopup="dialog" aria-expanded="false" aria-controls="a11yOverlay">
+                    <svg class="lucide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>
+                    <span>Accesibilitate</span>
+                </button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; ${new Date().getFullYear()} pH7 — decupați din POLIZU | Societatea Studenților în Inginerie Chimică și Biotehnologii. Toate drepturile rezervate.</span>
+            <span>Acest site nu colectează date personale ale vizitatorilor.</span>
+            <span class="ft-credit"><span class="ft-credit-glyph" aria-hidden="true">&lt;/&gt;</span><span>Web Developer &amp; Designer: <strong>Andrei Pătru</strong></span></span>
+        </div>
+    `;
+    document.querySelectorAll('.global-footer').forEach(f => f.innerHTML = footerHTML);
+
+    /* ==========================================================================
+       2. HERO VIDEO FALLBACK — EXACT DIN DEFAULT.HTML
+       ========================================================================== */
+    (function initHeroVideoFallback() {
+        const video = document.getElementById('heroVideo');
+        if (!video) return;
+        let settled = false;
+        let watchdogId = null;
+        const reveal = () => {
+            settled = true;
+            if (watchdogId) {
+                clearTimeout(watchdogId);
+                watchdogId = null;
+            }
+            video.style.display = '';
+        };
+        const giveUp = () => {
+            if (settled) return;
+            settled = true;
+            video.style.display = 'none';
+        };
+        video.addEventListener('error', giveUp, true);
+        video.addEventListener('playing', reveal);
+        video.muted = true;
+        video.playsInline = true;
+        const tryPlay = () => {
+            if (settled) return;
+            const p = video.play();
+            if (p && typeof p.catch === 'function') {
+                p.then(() => { settled = true; }).catch(() => {
+                    video.addEventListener('canplay', () => {
+                        if (!settled) video.play().catch(() => {});
+                    }, { once: true });
+                });
+            }
+        };
+        tryPlay();
+        watchdogId = setTimeout(() => {
+            if (!settled && video.readyState === 0) giveUp();
+        }, 8000);
+    })();
+
+    /* ==========================================================================
+       3. RANSOMIZER CU 28 DE FONTURI + ANIMAȚIE RAPIDĂ, DRAMATICĂ ȘI APROAPE INSTANTĂ
+       ========================================================================== */
+    (function () {
+        const root = document.getElementById('ph7');
+        if (!root) return;
+        const slots = [...root.querySelectorAll('.slot')];
+        const reduce = () =>
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+            document.documentElement.classList.contains('a11y-reduce-motion');
+
+        const FONTS = [
+            { f: "'Abril Fatface', serif", fs: 76 },
+            { f: "'Alfa Slab One', serif", fs: 68 },
+            { f: "'Anton', sans-serif", fs: 84 },
+            { f: "'Archivo Black', sans-serif", fs: 72 },
+            { f: "'Bebas Neue', sans-serif", fs: 92 },
+            { f: "'Black Ops One', sans-serif", fs: 70 },
+            { f: "'Bodoni Moda', serif", w: 900, fs: 78 },
+            { f: "'Bodoni Moda', serif", w: 900, st: 'italic', fs: 78 },
+            { f: "'Bungee', sans-serif", fs: 64 },
+            { f: "'Bungee Shade', sans-serif", fs: 62 },
+            { f: "'Courier Prime', monospace", w: 700, fs: 76 },
+            { f: "'Creepster', system-ui", fs: 80 },
+            { f: "'DM Serif Display', serif", st: 'italic', fs: 80 },
+            { f: "'Ewert', serif", fs: 66 },
+            { f: "'Fascinate Inline', system-ui", fs: 78 },
+            { f: "'Fredericka the Great', serif", fs: 74 },
+            { f: "'Monoton', sans-serif", fs: 68 },
+            { f: "'Permanent Marker', cursive", fs: 72 },
+            { f: "'Playfair Display', serif", st: 'italic', w: 900, fs: 78 },
+            { f: "'Righteous', sans-serif", fs: 74 },
+            { f: "'Rubik Glitch', system-ui", fs: 68 },
+            { f: "'Rubik Mono One', sans-serif", fs: 58 },
+            { f: "'Rye', serif", fs: 66 },
+            { f: "'Shrikhand', serif", fs: 72 },
+            { f: "'Special Elite', monospace", fs: 74 },
+            { f: "'Staatliches', sans-serif", fs: 86 },
+            { f: "'Ultra', serif", fs: 64 },
+            { f: "var(--font-groote)", w: 900, fs: 78 }
+        ];
+
+        const PALETTE = [
+            { bg: '#f5b027', fg: '#2f0f3a' },
+            { bg: '#2f0f3a', fg: '#f5b027' },
+            { bg: '#ffd166', fg: '#3d1452' },
+            { bg: '#5a2f8a', fg: '#f5b027' },
+            { bg: '#8348c4', fg: '#100b19' },
+            { bg: '#e9a514', fg: '#100b19' },
+            { bg: '#3d1452', fg: '#ffd166' },
+            { bg: '#c9a6f2', fg: '#2f0f3a' }
+        ];
+
+        const CHARS = { p: ['p', 'p', 'P'], H: ['H', 'H', 'h'], '7': ['7'] };
+        const VARIANTS = ['', '', '', '', 'v-outline', 'v-bar', 'v-frame', 'v-tape'];
+
+        const rnd = (a, b) => Math.random() * (b - a) + a;
+        const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+        function jagged() {
+            const pts = [];
+            const n = 4 + Math.floor(Math.random() * 3);
+            for (let i = 0; i < n; i++) pts.push(`${(i / n * 100).toFixed(1)}% ${rnd(0, 7).toFixed(1)}%`);
+            for (let i = 0; i < n; i++) pts.push(`${rnd(93, 100).toFixed(1)}% ${(i / n * 100).toFixed(1)}%`);
+            for (let i = 0; i < n; i++) pts.push(`${(100 - i / n * 100).toFixed(1)}% ${rnd(93, 100).toFixed(1)}%`);
+            for (let i = 0; i < n; i++) pts.push(`${rnd(0, 7).toFixed(1)}% ${(100 - i / n * 100).toFixed(1)}%`);
+            return `polygon(${pts.join(',')})`;
+        }
+
+        function makeCut(slot) {
+            const letter = slot.dataset.l;
+            const font = pick(FONTS);
+            const pal = pick(PALETTE);
+            const variant = pick(VARIANTS);
+            const el = document.createElement('span');
+            el.className = 'cut' + (variant ? ' ' + variant : '');
+            el.textContent = pick(CHARS[letter]);
+            el.style.fontFamily = font.f;
+            el.style.fontWeight = font.w || 400;
+            el.style.fontStyle = font.st || 'normal';
+            el.style.setProperty('--fs', (font.fs || 74) * rnd(0.92, 1.06));
+            el.style.setProperty('--fw', rnd(78, 96));
+            el.style.setProperty('--bg', pal.bg);
+            el.style.setProperty('--fg', pal.fg);
+            el.style.clipPath = jagged();
+            el.dataset.t = `translate(${rnd(-6, 6).toFixed(1)}%, ${rnd(-5, 5).toFixed(1)}%) rotate(${rnd(-11, 11).toFixed(1)}deg)`;
+            el.style.transform = el.dataset.t;
+            return el;
+        }
+
+        function instantDramaticSwap(slot) {
+            const zone = slot.querySelector('.zone');
+            const old = zone.querySelector('.cut');
+            const backToGlyph = old && Math.random() < 0.1;
+
+            if (old) old.remove();
+
+            if (backToGlyph) {
+                slot.classList.remove('is-cut');
+                const g = slot.querySelector('.glyph');
+                if (g) {
+                    g.animate([
+                        { transform: 'scale(1.22) rotate(-4deg)', filter: 'brightness(1.8)' },
+                        { transform: 'none', filter: 'brightness(1)' }
+                    ], { duration: 85, easing: 'cubic-bezier(0.08, 0.98, 0.18, 1)' });
+                }
+                return;
+            }
+
+            const cut = makeCut(slot);
+            zone.appendChild(cut);
+            slot.classList.add('is-cut');
+            cut.animate([
+                {
+                    transform: cut.dataset.t + ` scale(1.36) rotate(${rnd(-14, 14).toFixed(0)}deg)`,
+                    filter: 'brightness(1.85) contrast(1.5)'
+                },
+                {
+                    transform: cut.dataset.t + ' scale(0.96)',
+                    filter: 'brightness(1) contrast(1)',
+                    offset: 0.65
+                },
+                {
+                    transform: cut.dataset.t,
+                    filter: 'none'
+                }
+            ], { duration: 85, easing: 'cubic-bezier(0.08, 0.98, 0.18, 1)' });
+        }
+
+        function dramaticBurstSwap(slot) {
+            if (Math.random() < 0.45) {
+                instantDramaticSwap(slot);
+                setTimeout(() => instantDramaticSwap(slot), 55);
+            } else {
+                instantDramaticSwap(slot);
+            }
+        }
+
+        let last = -1;
+        function loop() {
+            if (!document.hidden && !reduce()) {
+                let i;
+                do { i = Math.floor(Math.random() * slots.length); } while (i === last && slots.length > 1);
+                last = i;
+                dramaticBurstSwap(slots[i]);
+            }
+            setTimeout(loop, rnd(420, 1050));
+        }
+
+        requestAnimationFrame(() => {
+            root.classList.add('is-in');
+            if (reduce()) return;
+            const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+            Promise.all([fontsReady, new Promise((r) => setTimeout(r, 1500))]).then(() => {
+                if (reduce()) return;
+                slots.forEach((s, i) => setTimeout(() => dramaticBurstSwap(s), i * 110));
+                setTimeout(loop, slots.length * 110 + 450);
+            });
+        });
+    })();
+
+    /* ==========================================================================
+       4. NAVBAR INVIZIBIL LA PRIMA ÎNCĂRCARE (APARE LA SCROLL SAU CURSOR SUS)
+       ========================================================================== */
+    const navEl = document.getElementById('mainNav');
+    const viewHome = document.getElementById('view-home');
+    const scrollProgressFill = document.getElementById('scrollProgressFill');
+    const supportsHoverNav = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    let mouseNearTop = false;
+    let lastHomeScrollTop = 0;
+
+    function updateNavVisibility(scrollTop = 0) {
+        if (!navEl) return;
+        const revealedByCursor = supportsHoverNav && mouseNearTop;
+        const shouldHide = (scrollTop < 24 && !revealedByCursor);
+        navEl.classList.toggle('nav-hidden', shouldHide);
+    }
+
+    if (supportsHoverNav) {
+        document.addEventListener('mousemove', (e) => {
+            const near = e.clientY < 120;
+            if (near !== mouseNearTop) {
+                mouseNearTop = near;
+                updateNavVisibility(lastHomeScrollTop);
+            }
+        }, { passive: true });
+    }
+
+    if (viewHome) {
+        viewHome.addEventListener('scroll', () => {
+            lastHomeScrollTop = viewHome.scrollTop;
+            updateNavVisibility(lastHomeScrollTop);
+            if (scrollProgressFill) {
+                const max = viewHome.scrollHeight - viewHome.clientHeight;
+                const pct = max > 0 ? Math.min(100, Math.max(0, (viewHome.scrollTop / max) * 100)) : 0;
+                scrollProgressFill.style.width = pct + '%';
+            }
+        }, { passive: true });
+    }
+    updateNavVisibility(0);
+
+    /* ==========================================================================
+       5. VALIDARE ȘI TRIMITERE FORMULAR ÎNSCRIERE (STILUL DEFAULT.HTML)
+       ========================================================================== */
+    (function () {
+        const form = document.getElementById('ph7EnrollForm');
+        const statusEl = document.getElementById('phFormStatus');
+        if (!form) return;
+
+        function clearError() {
+            const old = form.querySelector('.cereri-field-tooltip');
+            if (old) old.remove();
+            const bad = form.querySelector('.cereri-field-invalid');
+            if (bad) bad.classList.remove('cereri-field-invalid');
+        }
+
+        function showError(wrapEl, message) {
+            clearError();
+            wrapEl.classList.add('cereri-field-invalid');
+            const tip = document.createElement('div');
+            tip.className = 'cereri-field-tooltip';
+            tip.setAttribute('role', 'alert');
+            tip.innerHTML = `<i data-lucide="alert-circle"></i><span>${message}</span>`;
+            wrapEl.appendChild(tip);
+            if (window.lucide) lucide.createIcons({ root: tip });
+            wrapEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
+
+        form.addEventListener('input', clearError);
+        form.addEventListener('change', clearError);
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            clearError();
+
+            const nume = document.getElementById('phNume');
+            const prenume = document.getElementById('phPrenume');
+            const an = document.getElementById('phAn');
+            const dept = document.getElementById('phDept');
+            const rol = form.querySelector('input[name="rol"]:checked');
+
+            if (!nume.value.trim()) return showError(nume.closest('.cereri-field'), 'Completează numele.');
+            if (!prenume.value.trim()) return showError(prenume.closest('.cereri-field'), 'Completează prenumele.');
+            if (!an.value) return showError(an.closest('.cereri-field'), 'Alege anul de studiu.');
+            if (!dept.value) return showError(dept.closest('.cereri-field'), 'Alege departamentul.');
+            if (!rol) return showError(document.getElementById('phRoleField'), 'Alege între Videografie, Fotografie și Redacție.');
+
+            const subject = encodeURIComponent(`Înscriere pH7 — ${nume.value.trim()} ${prenume.value.trim()} (${rol.value})`);
+            const body = encodeURIComponent(
+                `Nume și prenume: ${nume.value.trim()} ${prenume.value.trim()}\n` +
+                `An de studiu: ${an.value}\n` +
+                `Departament: ${dept.value}\n` +
+                `Arie aleasă în pH7: ${rol.value}\n`
+            );
+
+            window.location.href = `mailto:ssic.upb@gmail.com?subject=${subject}&body=${body}`;
+            statusEl.textContent = 'Formular pregătit. Finalizează trimiterea din aplicația de mail.';
+            statusEl.className = 'cereri-status is-ok';
+        });
+    })();
+
+    /* ==========================================================================
+       6. CURSOR & ACCESIBILITATE DIN DEFAULT.HTML
+       ========================================================================== */
+    const cursor = document.getElementById('cursor');
+    const supportsRealCursor = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (supportsRealCursor && cursor) {
+        let tX = window.innerWidth / 2, tY = window.innerHeight / 2;
+        let cX = tX, cY = tY, rafId = 0, lastT = 0, seen = false;
+        const FOLLOW = 0.42;
+        const paint = () => {
+            cursor.style.transform = 'translate3d(' + cX + 'px,' + cY + 'px,0) translate(-50%,-50%)';
+        };
+        const loopCursor = (now) => {
+            const dt = Math.min(now - lastT, 48);
+            lastT = now;
+            const k = 1 - Math.pow(1 - FOLLOW, dt / 16.667);
+            const dx = tX - cX, dy = tY - cY;
+            if (Math.abs(dx) < 0.1 && Math.abs(dy) < 0.1) {
+                cX = tX; cY = tY; paint(); rafId = 0; return;
+            }
+            cX += dx * k; cY += dy * k; paint();
+            rafId = requestAnimationFrame(loopCursor);
+        };
+        paint();
+        window.addEventListener('mousemove', e => {
+            tX = e.clientX; tY = e.clientY;
+            if (!seen) { seen = true; cX = tX; cY = tY; paint(); }
+            if (!rafId) { lastT = performance.now(); rafId = requestAnimationFrame(loopCursor); }
+        }, { passive: true });
+    }
+
+    const HOVER_SELECTOR = '.hover-target, .soc-icon, a, button, select, input';
+    document.addEventListener('mouseover', e => {
+        if (cursor && e.target.closest(HOVER_SELECTOR)) cursor.classList.add('hovering');
+    });
+    document.addEventListener('mouseout', e => {
+        if (!cursor) return;
+        const leavingTarget = e.target.closest(HOVER_SELECTOR);
+        if (!leavingTarget) return;
+        const enteringTarget = e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest(HOVER_SELECTOR);
+        if (!enteringTarget) cursor.classList.remove('hovering');
+    });
+
+    (function () {
+        const STORAGE_KEY = 'ssicA11yPrefs';
+        const defaults = {
+            contrast: false, underline: false, cursorVisible: false,
+            reduceMotion: false, dyslexia: false, textStep: 0
+        };
+        let prefs = Object.assign({}, defaults);
+        try {
+            const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+            prefs = Object.assign({}, defaults, saved);
+        } catch (e) {}
+
+        function save() {
+            try { localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs)); } catch (e) {}
+        }
+
+        const html = document.documentElement;
+        const root = document.getElementById('a11yOverlay');
+        if (!root) return;
+        const triggerBtns = () => document.querySelectorAll('[data-a11y-trigger]');
+        const closeBtn = document.getElementById('a11yCloseBtn');
+        const resetBtn = document.getElementById('a11yResetBtn');
+        const sw = {
+            contrast: document.getElementById('a11ySwitchContrast'),
+            cursorVisible: document.getElementById('a11ySwitchCursor'),
+            reduceMotion: document.getElementById('a11ySwitchMotion'),
+            underline: document.getElementById('a11ySwitchUnderline'),
+            dyslexia: document.getElementById('a11ySwitchDyslexia')
+        };
+        const textDown = document.getElementById('a11yTextDown');
+        const textUp = document.getElementById('a11yTextUp');
+        const textDots = document.getElementById('a11yTextDots') ? document.getElementById('a11yTextDots').children : [];
+
+        function setSwitch(btn, on) {
+            if (!btn) return;
+            btn.classList.toggle('is-on', !!on);
+            btn.setAttribute('aria-checked', on ? 'true' : 'false');
+        }
+
+        function applyAll() {
+            html.classList.toggle('a11y-contrast', prefs.contrast);
+            html.classList.toggle('a11y-underline', prefs.underline);
+            html.classList.toggle('a11y-cursor-visible', prefs.cursorVisible);
+            html.classList.toggle('a11y-reduce-motion', prefs.reduceMotion);
+            html.classList.toggle('a11y-dyslexia', prefs.dyslexia);
+            html.setAttribute('data-a11y-text', String(prefs.textStep));
+
+            setSwitch(sw.contrast, prefs.contrast);
+            setSwitch(sw.cursorVisible, prefs.cursorVisible);
+            setSwitch(sw.reduceMotion, prefs.reduceMotion);
+            setSwitch(sw.underline, prefs.underline);
+            setSwitch(sw.dyslexia, prefs.dyslexia);
+
+            for (let i = 0; i < textDots.length; i++) {
+                textDots[i].classList.toggle('is-filled', i <= prefs.textStep);
+            }
+            if (textDown) textDown.disabled = prefs.textStep <= 0;
+            if (textUp) textUp.disabled = prefs.textStep >= 2;
+
+            triggerBtns().forEach(b => b.classList.toggle('is-active',
+                prefs.contrast || prefs.underline || prefs.cursorVisible || prefs.reduceMotion || prefs.dyslexia || prefs.textStep > 0
+            ));
+        }
+
+        function toggle(key) {
+            prefs[key] = !prefs[key];
+            save();
+            applyAll();
+        }
+
+        if (sw.contrast) sw.contrast.addEventListener('click', () => toggle('contrast'));
+        if (sw.cursorVisible) sw.cursorVisible.addEventListener('click', () => toggle('cursorVisible'));
+        if (sw.reduceMotion) sw.reduceMotion.addEventListener('click', () => toggle('reduceMotion'));
+        if (sw.underline) sw.underline.addEventListener('click', () => toggle('underline'));
+        if (sw.dyslexia) sw.dyslexia.addEventListener('click', () => toggle('dyslexia'));
+
+        if (textDown) textDown.addEventListener('click', () => {
+            if (prefs.textStep > 0) { prefs.textStep--; save(); applyAll(); }
+        });
+        if (textUp) textUp.addEventListener('click', () => {
+            if (prefs.textStep < 2) { prefs.textStep++; save(); applyAll(); }
+        });
+
+        function openPanel() {
+            root.classList.add('open');
+            triggerBtns().forEach(b => b.setAttribute('aria-expanded', 'true'));
+            setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 50);
+        }
+        function closePanel() {
+            root.classList.remove('open');
+            triggerBtns().forEach(b => b.setAttribute('aria-expanded', 'false'));
+        }
+
+        document.addEventListener('click', (e) => {
+            if (e.target.closest && e.target.closest('[data-a11y-trigger]')) openPanel();
+        });
+        if (closeBtn) closeBtn.addEventListener('click', closePanel);
+        root.addEventListener('click', (e) => { if (e.target === root) closePanel(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(); });
+        if (resetBtn) resetBtn.addEventListener('click', () => {
+            prefs = Object.assign({}, defaults);
+            save();
+            applyAll();
+        });
+
+        applyAll();
+    })();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.lucide) lucide.createIcons();
+    });
+    </script>
+</body>
+</html>
